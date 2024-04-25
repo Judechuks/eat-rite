@@ -68,7 +68,15 @@
   <section id="menu">
     <h1>Our Menu</h1>
     <article id="meals">
-      <!-- menu items goes here -->
+      {% for item in meals %}
+      <div class="box">
+        <img src="{{item.strMealThumb}}"/>
+        <h3>Name: {{item.strMeal}}</h3>
+        <h3>Category: {{item.strCategory}}</h3>
+        <h3>Origin: {{item.strArea}}</h3>
+        <a href="{{item.strSource}}" class="cta">learn more</a>
+      </div>
+      {% endfor %}
     </article>
   </section>
 
