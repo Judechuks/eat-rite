@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <!-- static css file -->
   <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <!-- static script file -->
+  <script defer src="{% static 'script.js' %}"></script>
 </head>
 <body>
   <!-- Header -->
@@ -58,10 +60,20 @@
       </p>
       <a href="#" class="cta">See more <i class="fa fa-angle-right"></i></a>
     </div>
-    <div class="div-right"><img src="" alt="hero image" /></div>
+    <div class="div-right"><img src="{% static 'media/about-img.webp' %}" alt="hero image" /></div>
   </section>
 
   <!-- Menu Section -->
+  <!-- API Integration -->
+  <section id="menu">
+    <h1>Our Menu</h1>
+    <article id="meals">
+      <!-- menu items goes here -->
+    </article>
+  </section>
+
+  <!-- Location -->
+  <section id="map"></section>
 
   <h1>Welcome to Eat Rite</h1>
   {{meal}}
