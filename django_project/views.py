@@ -7,6 +7,6 @@ def home(request):
   response = requests.get(
       'https://www.themealdb.com/api/json/v1/1/search.php?s=')
   data = response.json()
-  meal = data['meals'][0]['strMeal']
+  meals = data['meals'][0:8]
 
-  return render(request, 'templates/index.html', {'meal': meal})
+  return render(request, 'templates/index.html', {'meals': meals})
