@@ -7,9 +7,28 @@
   <title>EatRite</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fontawesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- static css file -->
   <link rel="stylesheet" href="{% static 'styles.css' %}" />
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">EatRite</a>
+    <nav>
+      <div class="menu">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <a class="cta" href="#contact">Get in touch</a>
+      </div>
+      <i class="fa fa-bars"></i>
+    </nav>
+  </header>
+
   <h1>Welcome to Eat Rite</h1>
   {{meal}}
 </body>
