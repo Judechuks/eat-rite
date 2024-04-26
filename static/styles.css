@@ -62,9 +62,7 @@ nav {
   font-size: 1.8rem;
   display: none;
   cursor: pointer;
-  position: fixed;
-  top: 0.6rem;
-  right: 2rem;
+  position: relative;
   z-index: 2;
 }
 
