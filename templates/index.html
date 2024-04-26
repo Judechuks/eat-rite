@@ -93,26 +93,32 @@
   <section id="news">
     <h1>World News</h1>
     <p>Get acquinted with the latest news around the world.</p>
-
-    <!-- search by country -->
-    <h4>Search by country</h4>
-    <form mehtod="get">
-      <!-- <input type='text' name='country'> -->
-      <select class="dropdown" name="country"></select>
-      <button type="submit" value="Search">Search</button>
-    </form>
     
-    <!-- search by category -->
-    <h4>Search by category</h4>
-    <ul class="category-container">
-      <li><a href="{% url 'home' %}?category=general">general</a></li>
-      <li><a href="{% url 'home' %}?category=health">health</a></li>
-      <li><a href="{% url 'home' %}?category=science">science</a></li>
-      <li><a href="{% url 'home' %}?category=technology">technology</a></li>
-      <li><a href="{% url 'home' %}?category=sports">sports</a></li>
-      <li><a href="{% url 'home' %}?category=business">business</a></li>
-      <li><a href="{% url 'home' %}?category=entertainment">entertainment</a></li>
-    </ul>
+    <main class="search-method-container">
+       <!-- search by country -->
+      <div class="search-method-1">
+        <h3>Search by country</h3>
+        <form mehtod="get">
+          <!-- <input type='text' name='country'> -->
+          <select class="dropdown" name="country"></select>
+          <button type="submit" value="Search">Search</button>
+        </form>
+      </div>
+      
+      <!-- search by category -->
+      <div class="search-method-2">
+        <h3>Search by category</h3>
+        <nav class="category-container">
+          <a href="{% url 'home' %}?category=general">general</a>
+          <a href="{% url 'home' %}?category=health">health</a>
+          <a href="{% url 'home' %}?category=science">science</a>
+          <a href="{% url 'home' %}?category=technology">technology</a>
+          <a href="{% url 'home' %}?category=sports">sports</a>
+          <a href="{% url 'home' %}?category=business">business</a>
+          <a href="{% url 'home' %}?category=entertainment">entertainment</a>
+        </nav>
+      </div>
+    </main>
     
     <article class="news-container">
       {% for news in newslist %}
