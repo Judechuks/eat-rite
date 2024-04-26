@@ -15,13 +15,24 @@ def home(request):
   meals = data['meals'][0:8]
 
   # news API
-  # search by country
   country = request.GET.get('country')
-  response = requests.get(
-      f'https://newsapi.org/v2/top-headlines?country={country}&apikey={my_secret}'
-  )
-  data = response.json()
-  newslist = data['articles']
+  category = request.GET.get('category')
+
+  # search by country
+  if country:
+    response = requests.get(
+        f'https://newsapi.org/v2/top-headlines?country={country}&apikey={my_secret}'
+    )
+    data = response.json()
+    newslist = data['articles']
+  # search by category
+  else:
+    response = requests.get(
+        f'https://newsapi.org/v2/top-headlines?category={category}&apikey={my_secret}'
+    )
+    data = response.json()
+    newslist = data['articles']
+    
 
   return render(request, 'templates/index.html', {
       'meals': meals,
