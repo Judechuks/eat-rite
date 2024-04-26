@@ -11,26 +11,26 @@ The project comprises of:
 #### News section - populated news data fetched from the [newsapi]('https://newsapi.org') with an option to get news by country or by category
 #### Footer section
 
-## TECHNOLOGY USED:
-### HTML
-### CSS
-### JavaScript
-### Python (Django)
+### TECHNOLOGY USED:
+#### HTML
+#### CSS
+#### JavaScript
+#### Python (Django)
 
-## LESSONS LEARNT
+### LESSONS LEARNT
 During the course of the project, I was able to use and gain more knowledge in/on: 
 
-** Some basic setup in view, urls, settings.py **
-** Setup and used static files (images, html, css, js) **
-** Fetch data and make use of APIs **
-** Making use of JSON **
-** Jinja Syntax to populate my UI **
-** Setting up and using .env to conceal secret keys **
+**Some basic setup in view, urls, settings.py**
+**Setup and used static files (images, html, css, js)**
+**Fetch data and make use of APIs**
+**Making use of JSON**
+**Jinja Syntax to populate my UI**
+**Setting up and using .env to conceal secret keys**
 And so many others.
 
 
 ### SETTING UP DOTENV 
-** STEPS: **
+**STEPS:**
 
 #### 1. settings.py:
 
@@ -44,7 +44,7 @@ It’s important to keep this key secret and not share it publicly or expose it 
 You can generate a new secret key using the following function.
 <blockquote>django.core.management.utils.get_random_secret_key</blockquote>
 
-By: 
+**By:** 
 Opening Python shell in your project directory and running the following commands:
 
 `python3 manage.py shell
@@ -57,12 +57,12 @@ Copy the output (i.e the generated secret key) and replace the existing SECRET_K
 ### Python Environment Variables 
 In Python, environment files, often named as .env files, are used to store configuration settings and sensitive information for a project. These files are commonly used with frameworks like Django and Flask, as well as other applications.
 
-** 1) Create an Environment File:**
+**1) Create an Environment File:**
 Create a file in your project directory and name it .env. This file should contain key-value pairs in the format KEY=VALUE, where each line represents a different variable.
 
-** The .env file should be in the same level with the manage.py **
+**The .env file should be in the same level with the manage.py**
 
-** 2) Adding Environment variables: **
+**2) Adding Environment variables:**
 Copy paste the SECRET_KEY & DEBUG values from settings.py to .env file as KEY=VALUE pair as shown below.
 
 <blockquote>
@@ -72,7 +72,7 @@ Copy paste the SECRET_KEY & DEBUG values from settings.py to .env file as KEY=VA
 
 **NOTE: these 2 will be added to the .env file without comma and white spaces**
 
-** 3) python dot-env : **
+**3) python dot-env :**
 Now install python-dotenv module in your virtual environment.
 
 `pip install python-dotenv`
