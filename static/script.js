@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBar = document.querySelector(".menu");
   const menuLinks = document.querySelectorAll(".menu a");
   const selectDrop = document.querySelector(".dropdown");
+  const categoryLinks = document.querySelectorAll(".category-container a");
+  const categoryList = document.querySelector('.category-container');
 
   // close menu when the navbar is clicked
   navBar.addEventListener('click', () => {
@@ -80,4 +82,25 @@ document.addEventListener("DOMContentLoaded", () => {
     output += `<option value="${country.cca2}">${country.country_name}</option>`;
   });
   selectDrop.innerHTML = output;
+
+  // selected category
+  // Add a click event listener to the parent container
+  categoryList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+      // Store the clicked category in session storage
+      sessionStorage.setItem('activeCategory', event.target.textContent);
+    }
+  });
+  
+  // Apply the "active" class based on the stored category
+  const activeCategory = sessionStorage.getItem('activeCategory');
+  if (activeCategory) {
+    categoryLinks.forEach((link) => {
+      if (link.textContent === activeCategory) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // end of DOMContentLoaded
 });
