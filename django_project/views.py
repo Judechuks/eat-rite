@@ -15,8 +15,11 @@ def home(request):
   meals = data['meals'][0:8]
 
   # news API
+  # search by country
+  country = request.GET.get('country')
   response = requests.get(
-      f'https://newsapi.org/v2/top-headlines?country=us&apikey={my_secret}')
+      f'https://newsapi.org/v2/top-headlines?country={country}&apikey={my_secret}'
+  )
   data = response.json()
   newslist = data['articles']
 
