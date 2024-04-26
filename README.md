@@ -6,9 +6,9 @@ The project comprises of:
 #### Header section
 #### Hero section
 #### About section
-#### Meal section - which shocases different meals fetched from [themeals api]('https://www.themealdb.com/api/json/v1/1/search.php?s=')
+#### Meal section - which shocases different meals fetched from [themeals api]('https://www.themealdb.com/api/json/v1/1/search.php?s=') 
 #### An integrated google map
-#### News section - populated news data fetched from the [newsapi]('https://newsapi.org')
+#### News section - populated news data fetched from the [newsapi]('https://newsapi.org') with an option to get news by country or by category
 #### Footer section
 
 ## TECHNOLOGY USED:
