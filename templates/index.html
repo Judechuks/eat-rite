@@ -77,7 +77,7 @@
         <h3>Name: {{item.strMeal}}</h3>
         <h3>Category: {{item.strCategory}}</h3>
         <h3>Origin: {{item.strArea}}</h3>
-        <a href="{{item.strSource}}" class="cta">learn more</a>
+        <a href="{{item.strSource}}" class="cta" target="_blank">learn more</a>
       </div>
       {% endfor %}
     </article>
@@ -101,7 +101,8 @@
         <h3>{{news.title}}</h3>
         <p>{{news.description}}</p>
         <h4>By: {{news.author}}</h4>
-        <a href="{{news.url}}" class="cta">Read more</a>
+        <a href="{{news.url}}" class="cta" target="_blank">Read more</a>
+        <small>{{news.publishedAt}}</small>
       </div>
   
       {% endfor %}

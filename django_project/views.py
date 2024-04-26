@@ -1,7 +1,10 @@
 import requests
 from django.shortcuts import render
 
-API_KEY = "YOUR_API_KEY"
+import os
+
+my_secret = os.environ['newsApiKey']
+DEBUG = os.environ.get('DEBUG') == 'True'
 
 
 def home(request):
@@ -13,7 +16,7 @@ def home(request):
 
   # news API
   response = requests.get(
-      f'https://newsapi.org/v2/top-headlines?country=us&apikey={API_KEY}')
+      f'https://newsapi.org/v2/top-headlines?country=us&apikey={my_secret}')
   data = response.json()
   newslist = data['articles']
 
