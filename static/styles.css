@@ -368,6 +368,9 @@ footer button {
   #about, #menu, #news {
     padding: 50px 10px;
   }
+  footer{
+    padding: 50px 10px 20px;
+  }
   #menu article div, .news-box{
     flex-basis: 100%;
   }
