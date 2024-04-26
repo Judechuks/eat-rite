@@ -54,7 +54,7 @@
         Our passion lies in creating exceptional dining experiences that
         tantalize your taste buds and warm your soul. From farm-fresh
         ingredients to innovative culinary techniques, every dish at The
-        Eatspot is a masterpiece — a symphony of textures, colors, and aromas.
+        Eatrite is a masterpiece — a symphony of textures, colors, and aromas.
         We believe that food is more than sustenance; it’s an art form. Our
         chefs, led by the talented Chef Jude, blend tradition with
         modernity, infusing each plate with love and creativity. Whether
@@ -93,54 +93,58 @@
   <section id="news">
     <h1>World News</h1>
     <p>Get acquinted with the latest news around the world.</p>
-    <div class="news-container">
+    <article class="news-container">
       {% for news in newslist %}
-      
-      <div class="news-box">
-        <img src="{{news.urlToImage}}" alt="news image" />
-        <h3>{{news.title}}</h3>
-        <p>{{news.description}}</p>
-        <h4>By: {{news.author}}</h4>
-        <a href="{{news.url}}" class="cta" target="_blank">Read more</a>
-        <small>{{news.publishedAt}}</small>
-      </div>
+        <div class="news-box">
+          <img src="{{news.urlToImage}}" alt="news image" />
+          <h3>{{news.title}}</h3>
+          <p>{{news.description}}</p>
+          <h4>Author: {{news.author}}</h4>
+          <a href="{{news.url}}" class="cta" target="_blank">Read more</a>
+          <small>Published: {{news.publishedAt}}</small>
+        </div>
   
       {% endfor %}
-    </div>
+    </article>
   </section>
 
   <!-- Footer -->
   <footer id="contact">
-    <article>
-      <a href="#" class="logo">Eatspot</a>
-      <div>
-        <i class="fa fa-location-dot"></i>
-        <p>203 Eatspot street mountain view, California, USA</p>
-      </div>
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p>info@eatspot.com</p>
-      </div>
-      <div>
-        <i class="fa fa-phone"></i>
-        <p>+18167777777</p>
-      </div>
-    </article>
-    <article>
-      <h2>Important links</h2>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#menu">menu</a></li>
-      </ul>
-    </article>
-    <article>
-      <h2>Talk with Us</h2>
-      <form action="">
-        <input type="email" placeholder="Email" />
-        <textarea cols="30" rows="2" placeholder="Message"></textarea>
-        <button>Submit</button>
-      </form>
-    </article>
+    <main class="footer-container">
+      <article>
+        <a href="#" class="logo">EatRite</a>
+        <div class="contact-detail">
+          <i class="fa fa-location-dot"></i>
+          <p>203 Eatsrite street mountain view, California, USA</p>
+        </div>
+        <div class="contact-detail">
+          <i class="fa fa-envelope"></i>
+          <p>info@eatrite.com</p>
+        </div>
+        <div class="contact-detail">
+          <i class="fa fa-phone"></i>
+          <p>+18167777777</p>
+        </div>
+      </article>
+      <article>
+        <h2>Important links</h2>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">menu</a></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Talk with Us</h2>
+        <form action="">
+          <input type="email" placeholder="Email" />
+          <textarea cols="30" rows="2" placeholder="Message"></textarea>
+          <button>Submit</button>
+        </form>
+      </article>
+    </main>
+    <div class="divider">
+      <p><i class="fa fa-copyright"></i> Copyright <span></span> Eatrite</p>
+    </div>
   </footer>
 </body>
 </html>
