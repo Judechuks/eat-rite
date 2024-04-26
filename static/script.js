@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectDrop = document.querySelector(".dropdown");
   const categoryLinks = document.querySelectorAll(".category-container a");
   const categoryList = document.querySelector('.category-container');
+  const copyright = document.querySelector('.copyright');
 
   // close menu when the navbar is clicked
   navBar.addEventListener('click', () => {
@@ -101,6 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // copyright
+  copyright.innerHTML = new Date().getFullYear();
   
   // end of DOMContentLoaded
 });
