@@ -32,13 +32,13 @@ header a {
   text-decoration: none;
   width: fit-content;
   padding: 0.5em 1.5em;
-  background-color: rgb(39, 128, 243);
+  background-color: orangered;
   color: aliceblue;
   font-size: 1.1em;
   transition: 0.8s;
 }
 .cta:hover {
-  background: darkblue;
+  background: #ef2906;
 }
 .menu {
   display: flex;
@@ -99,7 +99,7 @@ nav {
 }
 #about .div-right {
   border-radius: 15% 0;
-  border: 10px solid white;
+  border: 10px solid orangered;
   flex-basis: 45%;
 }
 #about .div-left {
@@ -127,6 +127,7 @@ nav {
   height: 100%;
 }
 
+/* menu */
 #menu {
   padding: 50px 40px;
 }
@@ -137,12 +138,12 @@ nav {
 }
 #menu article {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 25px;
 }
-#menu .box {
-  border: 1px solid blue;
-  min-width: 22%;
+#menu div {
+  border: 1px solid orangered;
+  flex-basis: 23%;
 }
 #menu h3 {
   margin: 20px 10px;
@@ -159,7 +160,6 @@ nav {
 }
 footer {
   padding: 50px 40px;
-  background-color: blue;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -194,7 +194,7 @@ footer button {
   display: block;
   width: 100%;
   margin-bottom: 15px;
-  background-color: darkcyan;
+  background-color: #666;
   padding: 0.5em;
   font-family: sans-serif;
   border: 0;
@@ -207,4 +207,71 @@ footer button {
   background-color: white;
   color: black;
   width: 100px;
+}
+
+/* media query */
+@media screen and (max-width: 1031px) {
+  #menu article div {
+    flex-basis: 31%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .fa-bars {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    right: -65%;
+    flex-direction: column;
+    height: 100vh;
+    width: 60%;
+    background-color: #333;
+    top: 0;
+    justify-content: center;
+    gap: 15px;
+    transition: 1s;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu ul a {
+    text-align: center;
+  }
+
+  nav {
+    flex-basis: fit-content;
+  }
+  nav:hover .menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #about {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #menu article div {
+    flex-basis: 48%;
+  }
+}
+@media screen and (max-width: 722px) {
+  #menu article {
+    justify-content: center;
+  }
+  #menu article div {
+    flex-basis: 80%;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  #about, #menu, footer {
+    padding: 50px 10px;
+  }
+  #menu article div{
+    flex-basis: 100%;
+  }
 }
