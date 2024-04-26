@@ -58,10 +58,14 @@ li {
 nav {
   flex-basis: 60%;
 }
-.fa-bars {
-  font-size: 2rem;
+.fa-bars, .fa-times {
+  font-size: 1.8rem;
   display: none;
   cursor: pointer;
+  position: fixed;
+  top: 0.6rem;
+  right: 2rem;
+  z-index: 2;
 }
 
 /* hero */
@@ -221,12 +225,14 @@ footer button {
   }
   .menu {
     position: fixed;
+    z-index: 2;
     right: -65%;
     flex-direction: column;
     height: 100vh;
     width: 60%;
     background-color: #333;
-    top: 0;
+    /* top: 58px; */
+    top: 0px;
     justify-content: center;
     gap: 15px;
     transition: 1s;
@@ -242,11 +248,16 @@ footer button {
   nav {
     flex-basis: fit-content;
   }
-  nav:hover .menu {
+  .menu.active {
     right: 0;
   }
+  .menu.active ~ div .fa-times {
+    display: block;
+  }
+  .menu.active ~ div .fa-bars {
+    display: none;
+  }
 }
-
 @media screen and (max-width: 850px) {
   #about {
     flex-direction: column;
