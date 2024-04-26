@@ -93,15 +93,27 @@
   <section id="news">
     <h1>World News</h1>
     <p>Get acquinted with the latest news around the world.</p>
+
+    <!-- search by country -->
+    <h2>Search by country</h2>
+    <form mehtod="get">
+      <input type='text' name='country'>
+      <button type="submit" value="Search">Search</button>
+    </form>
+    
+    <!-- search by category -->
+    <h2>Search by category</h2>
+    
     <article class="news-container">
       {% for news in newslist %}
         <div class="news-box">
           <img src="{{news.urlToImage}}" alt="news image" />
-          <h3>{{news.title}}</h3>
-          <p>{{news.description}}</p>
-          <h4>Author: {{news.author}}</h4>
+          <h5>Author: {{news.author}}</h4>
+          <h4>{{news.title}}</h3>
+          <h5>Source: {{news.source.name}}</h4>
+          <hr>
+          <small>Date: {{news.publishedAt}}</small>
           <a href="{{news.url}}" class="cta" target="_blank">Read more</a>
-          <small>Published: {{news.publishedAt}}</small>
         </div>
   
       {% endfor %}
