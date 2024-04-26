@@ -178,6 +178,7 @@ nav {
 #news .cta{
   display: block;
   margin-block: 8px;
+  padding: 6px;
 }
 .news-box h4{
   line-height: 1.1;
@@ -189,6 +190,47 @@ nav {
 .news-box small{
   display: block;
   margin-top: 12px;
+}
+/* search method */
+.search-method-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 30px;
+}
+.search-method-container h3{
+  margin-bottom: 10px;
+}
+.search-method-1 form{
+  display: flex;
+}
+.search-method-1 select,
+.search-method-1 button{
+  cursor: pointer;
+  padding: 4px 6px;
+  border: none;
+}
+.search-method-1 button{
+  color: #f2f2f2;
+  background: orangered;
+}
+.search-method-2 nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.search-method-2 nav a{
+  color: #f2f2f2;
+  background: #121314;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.4s;
+}
+.search-method-2 ul a:hover,
+.search-method-2 a.active{
+  border-color: orangered;
 }
 
 /* footer */
@@ -241,9 +283,10 @@ footer textarea::placeholder {
   color: white;
 }
 footer button {
-  background-color: white;
-  color: black;
+  color: #f2f2f2;
+  background: orangered;
   width: 100px;
+  cursor: pointer;
 }
 .divider{
   border-top: 1px solid #f2f2f2;
@@ -256,6 +299,10 @@ footer button {
 @media screen and (max-width: 1031px) {
   #menu article div, .news-box {
     flex-basis: 31%;
+  }
+  .search-method-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -318,7 +365,7 @@ footer button {
   }
 }
 @media screen and (max-width: 450px) {
-  #about, #menu, #new {
+  #about, #menu, #news {
     padding: 50px 10px;
   }
   #menu article div, .news-box{
